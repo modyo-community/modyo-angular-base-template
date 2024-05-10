@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'dynamic-angular-base-template' title`, () => {
+  it(`should have the 'modyo-angular-base-template' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('dynamic-angular-base-template');
+    expect(app.title).toEqual('modyo-angular-base-template');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, dynamic-angular-base-template');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, modyo-angular-base-template');
   });
 });

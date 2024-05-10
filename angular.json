@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "dynamic-angular-base-template": {
+    "modyo-angular-base-template": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/dynamic-angular-base-template",
+            "outputPath": "dist/modyo-angular-base-template",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "dynamic-angular-base-template:build:production"
+              "buildTarget": "modyo-angular-base-template:build:production"
             },
             "development": {
-              "buildTarget": "dynamic-angular-base-template:build:development"
+              "buildTarget": "modyo-angular-base-template:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "dynamic-angular-base-template:build"
+            "buildTarget": "modyo-angular-base-template:build"
           }
         },
         "test": {

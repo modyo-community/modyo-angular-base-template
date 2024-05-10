@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'dynamic-angular-base-template';
+  title = 'modyo-angular-base-template';
 }

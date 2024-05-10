@@ -1,5 +1,5 @@
 {
-  "name": "dynamic-angular-base-template",
+  "name": "modyo-angular-base-template",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -16,7 +16,7 @@
     "@angular/core": "^17.3.0",
     "@angular/forms": "^17.3.0",
     "@angular/platform-browser": "^17.3.0",
-    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/platform-browser-modyo": "^17.3.0",
     "@angular/router": "^17.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
