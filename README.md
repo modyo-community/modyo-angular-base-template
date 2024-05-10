@@ -1,27 +1,60 @@
-# ModyoAngularBaseTemplate
+# dynamic-react-base-template
+## Requirements:
+- node@18+
+- npm@10+
+- @modyo/cli@latest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+## Installation and initial setup
+Download or fork this repository, and then:
 
-## Development server
+```console
+cd path/to/modyo-angular-base-template
+npm i
+npm run start
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Deploy to Modyo Platform Setup
+For deploying your project to Modyo and integrating it with your CI/CD pipeline, follow these steps:
+1. Install the [modyo-cli](https://docs.modyo.com/en/platform/channels/cli.html)
+```console
+npm i -g @modyo/cli
+```
+2. Change the property name in `package.json` to the name of your project
+3. Change the root `id` property to your project name in `public/index.html` and `src/index.tsx`
+**Note**: The root id should be _unique_ in your site and it should be written in camelCase.
+4. Configure the necessary environment variables in an `.env` file or as part of your CI settings(this project have an `.env.example` that you can use, just remove the extension an you are ready to go!):
 
-## Code scaffolding
+```yaml
+# For deploying your project to Modyo and integrating it with your CI/CD pipeline
+# rename this file to ".env" and update the values with your own configuration.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Find more information on:
+# - Modyo Docs https://docs.modyo.com
+# - Modyo Community https://www.modyo.com/community
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Base URL of your Modyo organization
+MODYO_ACCOUNT_URL=https://my-org.modyo.cloud/
 
-## Running unit tests
+# Either the host or the ID where you will deploy your micro frontend (not both)
+# MODYO_SITE_HOST=my-site
+MODYO_SITE_ID=65
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Token for authorizing the deployment, obtained from Modyo
+MODYO_TOKEN=gT0ogV43LSy4nV9cYtc_hH0i_rUFa01q-12ptFzoW8
 
-## Running end-to-end tests
+# Major version of the Modyo platform where the deployment will take place (8 or 9)
+MODYO_VERSION=10
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Directory containing the micro frontend bundle
+MODYO_BUILD_DIRECTORY=dist/modyo-angular-base-template
 
-## Further help
+# Name to identify your Micro Frontend in Modyo
+WIDGET_NAME=modyo-angular-base-template
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Directive necessary for safely removing some libraries from the liquid parser
+MODYO_DISABLE_LIQUID_REGEX=raw
+```
+
+## Learn More
+Find more information about microfrontends and configuration details on [Modyo Docs](https://docs.modyo.com) & [Modyo Community](https://www.modyo.com/community)
