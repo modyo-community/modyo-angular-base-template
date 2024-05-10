@@ -1,4 +1,4 @@
-# dynamic-react-base-template
+# modyo-angular-base-template
 ## Requirements:
 - node@18+
 - npm@10+
